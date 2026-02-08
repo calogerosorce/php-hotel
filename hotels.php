@@ -74,18 +74,19 @@
     <div class="card m-5" style="width: 18rem;";>
 <?php
 
-foreach ($hotels as $hotel)
-    if($hotel['vote'] >= $vote_hotel && $hotel['parking'] == $parking_hotel ) 
-       echo "
-    
+foreach ($hotels as $hotel) {
+    if($hotel['vote'] >= $vote_hotel && $hotel['parking'] == $parking_hotel ){ 
+       ?>     
     <div class='card-body'>
-    <h5 class='card-title'>" . $hotel["name"] . "</h5>
-    <h6 class= 'card-subtitle mb-2 text-body-secondary'>" . $hotel['vote'] . "</h6>
-    <p class= 'card-text'>" . $hotel["description"] . ".</p>
-    </div>
-    <br>
-    ";
-?>
+    <h5 class='card-title'><?php echo $hotel["name"] ?></h5>
+    <h6 class= 'card-subtitle mb-2 text-body-secondary'><?php echo $hotel['vote']?> ⭐</h6>
+    <p class= 'card-text'><?php echo $hotel["description"] ?></p>
+    <p class= 'card-text'> Parcheggio <?php echo $hotel["parking"] ? 'presente' : 'assente' ?></p>
+    <p class= 'card-text'><?php echo 'distanza dal centro ' . $hotel["distance_to_center"] ?> KM</p>
+    </div> 
+    <?php
+}}
+ ?>
 </div>
 <!-- <pre>
 </pre> -->
