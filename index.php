@@ -70,7 +70,7 @@
 </head>
 <body>
     <div class="container">
-    <h1>Hotels</h1>
+    <h1 class="text-center">Hotels</h1>
 
     <form action="./hotels.php" method="GET">
         <label for="">Stelle Hotel</label>
